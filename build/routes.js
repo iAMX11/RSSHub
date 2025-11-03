@@ -28593,6 +28593,49 @@ export default {
     "url": "cqgas.cn",
     "lang": "zh-CN"
   },
+  "cqu": {
+    "routes": {
+      "/jwc/:path{.+}?": {
+        "path": "/jwc/:path{.+}?",
+        "categories": [
+          "university"
+        ],
+        "example": "/cqu/jwc/index/tzgg",
+        "parameters": {
+          "path": {
+            "description": "路径参数，默认为 `index/tzgg`",
+            "default": "index/tzgg"
+          }
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "jwc.cqu.edu.cn/:path"
+            ],
+            "target": "/jwc/:path"
+          }
+        ],
+        "name": "本科教学信息网通知",
+        "maintainers": [
+          "AhsokaTano26"
+        ],
+        "location": "index.ts",
+        "module": () => import('@/routes/cqu/index.ts')
+      }
+    },
+    "name": "重庆大学",
+    "apiRoutes": {},
+    "url": "cqu.edu.cn",
+    "lang": "zh-CN"
+  },
   "cqwu": {
     "routes": {
       "/news/:type?": {
@@ -29430,6 +29473,49 @@ export default {
     "name": "重庆工商大学",
     "url": "www.ctbu.edu.cn/",
     "lang": "zh-CN"
+  },
+  "ctinews": {
+    "routes": {
+      "/topic/:topic?": {
+        "path": "/topic/:topic?",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/ctinews/topic/KDdek5vgXx",
+        "parameters": {
+          "topic": "話題 ID，可在 URL 中獲取，留空為 `KDdek5vgXx`"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "ctinews.com/news/topics/:topic",
+              "ctinews.com"
+            ]
+          }
+        ],
+        "name": "話題",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "ctinews.com",
+        "location": "topic.ts",
+        "module": () => import('@/routes/ctinews/topic.ts')
+      }
+    },
+    "name": "中天新聞網",
+    "url": "ctinews.com",
+    "categories": [
+      "new-media"
+    ],
+    "lang": "zh-TW"
   },
   "cts": {
     "routes": {
