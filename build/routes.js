@@ -9026,7 +9026,8 @@ export default {
       "/information/:type?": {
         "path": "/information/:type?",
         "categories": [
-          "new-media"
+          "new-media",
+          "popular"
         ],
         "example": "/aliresearch/information",
         "parameters": {
@@ -129016,7 +129017,7 @@ export default {
           "requireConfig": [
             {
               "name": "YOUTUBE_KEY",
-              "description": " YouTube API Key, support multiple keys, split them with `,`, [API Key application](https://console.developers.google.com/)"
+              "description": "YouTube API Key, support multiple keys, split them with `,`, [API Key application](https://console.developers.google.com/)"
             }
           ],
           "requirePuppeteer": false,
